@@ -1,5 +1,6 @@
+---
 - name: Display Maven Aritifact
-  hosts: web
+  hosts: local
   become: yes
 
   tasks:
