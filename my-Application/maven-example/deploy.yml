@@ -1,5 +1,5 @@
 -name: Display Maven Aritifact
- hosts: local
+ hosts: web
  become: yes
 
  tasks:
