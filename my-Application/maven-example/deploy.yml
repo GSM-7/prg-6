@@ -1,5 +1,5 @@
 ---
-- name: Deploy Maven Aritifact
+- name: Deploy Maven Artifact
   hosts: web
   become: yes
 
