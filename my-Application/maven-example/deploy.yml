@@ -6,7 +6,7 @@
   tasks:
     - name: Ensure app directory exists
       file:
-        path: /home/jenkins/myapp
+        path: /opt/myapp
         state: directory
         owner: jenkins
         group: jenkins
@@ -16,9 +16,9 @@
       copy:
         src: /var/lib/jenkins/workspace/prg8/my-Application/maven-example/target/maven-example-1.0-SNAPSHOT.jar
         dest: /opt/myapp/maven-example-1.0-SNAPSHOT.jar
-        remote_src: yes
+        mode: '0644'
 
     - name: Run application
-      shell: nohup java -jar /var/lib/jenkins/workspace/prg8/my-Application/apps/myapp-1.0-SNAPSHOT.jar &
+      shell: nohup java -jar /opt/myapp/maven-example-1.0-SNAPSHOT.jar &
       args:
-        chdir: /var/lib/jenkins/workspace/prg8/my-Application/apps
+        chdir: /opt/myapp
