@@ -1,7 +1,7 @@
 ---
 - name: Deploy Maven Artifact
   hosts: web
-  become: no
+  become: true
 
   tasks:
     - name: Ensure app directory exists
