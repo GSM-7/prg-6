@@ -6,7 +6,7 @@
   tasks:
     - name: Ensure app directory exists
       file:
-        path: /opt/myapp
+        path: /home/jenkins/myapp
         state: directory
         owner: jenkins
         group: jenkins
