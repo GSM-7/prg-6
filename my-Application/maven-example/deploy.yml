@@ -1,3 +1,4 @@
+---
 - name: Deploy Maven Artifact
   hosts: web
   become: no
@@ -5,7 +6,7 @@
   tasks:
     - name: Ensure app directory exists
       file:
-        path: /var/lib/jenkins/workspace/prg8/my-Application/apps
+        path: /opt/myapp
         state: directory
         owner: jenkins
         group: jenkins
